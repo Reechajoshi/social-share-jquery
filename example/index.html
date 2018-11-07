@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>HIDESHARE Social Sharing jQuery Plugin</title>
+  <meta name="description" content="jQuery plugin for social sharing. Made for developers. Easy enough for beginners.">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="../hideshare.css" rel="stylesheet">
+</head>
+<body>
+  <img src="http://farm7.staticflickr.com/6213/6243090894_8b8dd862cd.jpg" alt="Hideshare Social Sharing Plugin">
+  <a class="share1" onclick="show_hideshare(1);" href="#">share me</a>
+  <a class="share2" onclick="show_hideshare(2);" href="#">share me</a>
+  <a href="https://github.com/arnonate/hideshare"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="../hideshare.js"></script>
+  <script>
+	var index = 0;
+    $(document).ready(function() {
+      $(".share1").hideshare({
+          link: "http://natearnold.me/hideshare/example",
+          media: "http://farm7.staticflickr.com/6213/6243090894_8b8dd862cd.jpg",
+          position: "top",
+          linkedin: false
+		});
+		
+		$(".share2").hideshare({
+          link: "http://natearnold.me/hideshare/example",
+          media: "http://farm7.staticflickr.com/6213/6243090894_8b8dd862cd.jpg",
+          position: "top",
+          linkedin: false
+		});
+    });
+	
+	function show_hideshare(idx)
+	{
+		index = idx;
+	}
+  </script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36512369-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</body>
+</html>
